@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="40114" started-at="2020-01-23T20:28:21Z" finished-at="2020-01-23T20:29:01Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="40114" started-at="2020-01-23T20:28:21Z" finished-at="2020-01-23T20:29:01Z">
+      <class name="involve.me.Tests.NewProjectTest">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:involve.me.Tests.NewProjectTest@1992eaf4]" name="setup" is-config="true" duration-ms="11607" started-at="2020-01-23T20:28:21Z" finished-at="2020-01-23T20:28:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@51a719e7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setupLogin()[pri:0, instance:involve.me.Tests.NewProjectTest@1992eaf4]" name="setupLogin" is-config="true" duration-ms="5907" started-at="2020-01-23T20:28:32Z" finished-at="2020-01-23T20:28:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupLogin -->
+        <test-method status="PASS" signature="t_01chooseTemplate()[pri:0, instance:involve.me.Tests.NewProjectTest@1992eaf4]" name="t_01chooseTemplate" duration-ms="21784" started-at="2020-01-23T20:28:38Z" description="choose template" finished-at="2020-01-23T20:29:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- t_01chooseTemplate -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:involve.me.Tests.NewProjectTest@1992eaf4]" name="tearDown" is-config="true" duration-ms="669" started-at="2020-01-23T20:29:00Z" finished-at="2020-01-23T20:29:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- involve.me.Tests.NewProjectTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -1,0 +1,149 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>14/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Jan 23 22:29:22 IST 2020</td>
+</tr>
+<tr><td>Total time:</td><td>218 seconds (218695 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='involve.me.Tests.OrganizationSettingsTest.t_01changeOrganizationName()'><b>t_01changeOrganizationName</b><br>Test class: involve.me.Tests.OrganizationSettingsTest<br>Test method: change organization name</td>
+<td></td>
+<td>5</td>
+<td>involve.me.Tests.OrganizationSettingsTest@1adb7478</td></tr>
+<tr>
+<td title='involve.me.Tests.GeneralSettingsTest.t_01changeProjectSettings()'><b>t_01changeProjectSettings</b><br>Test class: involve.me.Tests.GeneralSettingsTest<br>Test method: update settings</td>
+<td></td>
+<td>16</td>
+<td>involve.me.Tests.GeneralSettingsTest@36a7abe1</td></tr>
+<tr>
+<td title='involve.me.Tests.NewProjectTest.t_01chooseTemplate()'><b>t_01chooseTemplate</b><br>Test class: involve.me.Tests.NewProjectTest<br>Test method: choose template</td>
+<td></td>
+<td>23</td>
+<td>involve.me.Tests.NewProjectTest@11a82d0f</td></tr>
+<tr>
+<td title='involve.me.Tests.MainTest.t_01deleteProject()'><b>t_01deleteProject</b><br>Test class: involve.me.Tests.MainTest<br>Test method: delete project</td>
+<td></td>
+<td>13</td>
+<td>involve.me.Tests.MainTest@e044b4a</td></tr>
+<tr>
+<td title='involve.me.Tests.LogInTest.t_01logInSuccess()'><b>t_01logInSuccess</b><br>Test class: involve.me.Tests.LogInTest<br>Test method: login success</td>
+<td></td>
+<td>0</td>
+<td>involve.me.Tests.LogInTest@64a896b0</td></tr>
+<tr>
+<td title='involve.me.Tests.YourAccountTest.t_01updateInformation()'><b>t_01updateInformation</b><br>Test class: involve.me.Tests.YourAccountTest<br>Test method: update account Information</td>
+<td></td>
+<td>7</td>
+<td>involve.me.Tests.YourAccountTest@3ae66c85</td></tr>
+<tr>
+<td title='involve.me.Tests.MainTest.t_02addNewWorkspace()'><b>t_02addNewWorkspace</b><br>Test class: involve.me.Tests.MainTest<br>Test method: add workspace</td>
+<td></td>
+<td>2</td>
+<td>involve.me.Tests.MainTest@e044b4a</td></tr>
+<tr>
+<td title='involve.me.Tests.OrganizationSettingsTest.t_02createNewOrganization()'><b>t_02createNewOrganization</b><br>Test class: involve.me.Tests.OrganizationSettingsTest<br>Test method: error message when try create organization</td>
+<td></td>
+<td>0</td>
+<td>involve.me.Tests.OrganizationSettingsTest@1adb7478</td></tr>
+<tr>
+<td title='involve.me.Tests.LogInTest.t_02logInFaild()'><b>t_02logInFaild</b><br>Test class: involve.me.Tests.LogInTest<br>Test method: login faild</td>
+<td></td>
+<td>5</td>
+<td>involve.me.Tests.LogInTest@64a896b0</td></tr>
+<tr>
+<td title='involve.me.Tests.OrganizationSettingsTest.t_03changeOrganization()'><b>t_03changeOrganization</b><br>Test class: involve.me.Tests.OrganizationSettingsTest<br>Test method: change oragnization</td>
+<td></td>
+<td>1</td>
+<td>involve.me.Tests.OrganizationSettingsTest@1adb7478</td></tr>
+<tr>
+<td title='involve.me.Tests.MainTest.t_03deleteWorkspace()'><b>t_03deleteWorkspace</b><br>Test class: involve.me.Tests.MainTest<br>Test method: delete workspace</td>
+<td></td>
+<td>1</td>
+<td>involve.me.Tests.MainTest@e044b4a</td></tr>
+<tr>
+<td title='involve.me.Tests.LogInTest.t_03resetPassFaild()'><b>t_03resetPassFaild</b><br>Test class: involve.me.Tests.LogInTest<br>Test method: reset password faild</td>
+<td></td>
+<td>1</td>
+<td>involve.me.Tests.LogInTest@64a896b0</td></tr>
+<tr>
+<td title='involve.me.Tests.MainTest.t_04renameWorkspace()'><b>t_04renameWorkspace</b><br>Test class: involve.me.Tests.MainTest<br>Test method: rename workspace</td>
+<td></td>
+<td>5</td>
+<td>involve.me.Tests.MainTest@e044b4a</td></tr>
+<tr>
+<td title='involve.me.Tests.LogInTest.t_04resetPassFaild()'><b>t_04resetPassFaild</b><br>Test class: involve.me.Tests.LogInTest<br>Test method: reset password Success</td>
+<td></td>
+<td>1</td>
+<td>involve.me.Tests.LogInTest@64a896b0</td></tr>
+</table><p>
+</body>
+</html>
