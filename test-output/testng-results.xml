@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="3" total="4" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="40114" started-at="2020-01-23T20:28:21Z" finished-at="2020-01-23T20:29:01Z">
+  <suite name="Default suite" duration-ms="32951" started-at="2020-01-24T10:10:37Z" finished-at="2020-01-24T10:11:10Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="40114" started-at="2020-01-23T20:28:21Z" finished-at="2020-01-23T20:29:01Z">
-      <class name="involve.me.Tests.NewProjectTest">
-        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:involve.me.Tests.NewProjectTest@1992eaf4]" name="setup" is-config="true" duration-ms="11607" started-at="2020-01-23T20:28:21Z" finished-at="2020-01-23T20:28:32Z">
+    <test name="Default test" duration-ms="32951" started-at="2020-01-24T10:10:37Z" finished-at="2020-01-24T10:11:10Z">
+      <class name="involve.me.Tests.MainTest">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:involve.me.Tests.MainTest@7651218e]" name="setup" is-config="true" duration-ms="11925" started-at="2020-01-24T10:10:37Z" finished-at="2020-01-24T10:10:49Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@51a719e7]]>
+                <![CDATA[org.testng.TestRunner@7b3c2ae0]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setupLogin()[pri:0, instance:involve.me.Tests.NewProjectTest@1992eaf4]" name="setupLogin" is-config="true" duration-ms="5907" started-at="2020-01-23T20:28:32Z" finished-at="2020-01-23T20:28:38Z">
+        <test-method status="PASS" signature="setupLogin()[pri:0, instance:involve.me.Tests.MainTest@7651218e]" name="setupLogin" is-config="true" duration-ms="6575" started-at="2020-01-24T10:10:49Z" finished-at="2020-01-24T10:10:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupLogin -->
-        <test-method status="PASS" signature="t_01chooseTemplate()[pri:0, instance:involve.me.Tests.NewProjectTest@1992eaf4]" name="t_01chooseTemplate" duration-ms="21784" started-at="2020-01-23T20:28:38Z" description="choose template" finished-at="2020-01-23T20:29:00Z">
+        <test-method status="PASS" signature="t_01deleteProject()[pri:0, instance:involve.me.Tests.MainTest@7651218e]" name="t_01deleteProject" duration-ms="13372" started-at="2020-01-24T10:10:56Z" description="delete project" finished-at="2020-01-24T10:11:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- t_01chooseTemplate -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:involve.me.Tests.NewProjectTest@1992eaf4]" name="tearDown" is-config="true" duration-ms="669" started-at="2020-01-23T20:29:00Z" finished-at="2020-01-23T20:29:01Z">
+        </test-method> <!-- t_01deleteProject -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:involve.me.Tests.MainTest@7651218e]" name="tearDown" is-config="true" duration-ms="727" started-at="2020-01-24T10:11:10Z" finished-at="2020-01-24T10:11:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- involve.me.Tests.NewProjectTest -->
+      </class> <!-- involve.me.Tests.MainTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.qameta.allure.Step;
@@ -85,7 +86,7 @@ public class MainPage extends BasePage {
 
 	@Step("check counter projects")
 	public int totalProjects() {
-		sleep(2000);
+		WebDriverWait wait = new WebDriverWait(driver, 15); wait.until(ExpectedConditions.elementToBeClickable(totalMyWorkspace));
 		String total = getText(totalMyWorkspace);
 		int num = Integer.parseInt(total);
 		System.out.println("The number of tasks: " + num);
