@@ -2,188 +2,188 @@
 <testng-results skipped="0" failed="0" ignored="0" total="14" passed="14">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="218695" started-at="2020-01-23T20:29:22Z" finished-at="2020-01-23T20:33:01Z">
+  <suite name="Suite" duration-ms="201091" started-at="2020-01-27T18:01:25Z" finished-at="2020-01-27T18:04:46Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="218695" started-at="2020-01-23T20:29:22Z" finished-at="2020-01-23T20:33:01Z">
+    <test name="Test" duration-ms="201091" started-at="2020-01-27T18:01:25Z" finished-at="2020-01-27T18:04:46Z">
       <class name="involve.me.Tests.OrganizationSettingsTest">
-        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:involve.me.Tests.OrganizationSettingsTest@1adb7478]" name="setup" is-config="true" duration-ms="12088" started-at="2020-01-23T20:32:10Z" finished-at="2020-01-23T20:32:22Z">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:involve.me.Tests.OrganizationSettingsTest@3956b302]" name="setup" is-config="true" duration-ms="10579" started-at="2020-01-27T18:03:57Z" finished-at="2020-01-27T18:04:07Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@6f959640]]>
+                <![CDATA[org.testng.TestRunner@3ff83cc8]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setupLogin()[pri:0, instance:involve.me.Tests.OrganizationSettingsTest@1adb7478]" name="setupLogin" is-config="true" duration-ms="5220" started-at="2020-01-23T20:32:22Z" finished-at="2020-01-23T20:32:28Z">
+        <test-method status="PASS" signature="setupLogin()[pri:0, instance:involve.me.Tests.OrganizationSettingsTest@3956b302]" name="setupLogin" is-config="true" duration-ms="7215" started-at="2020-01-27T18:04:07Z" finished-at="2020-01-27T18:04:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupLogin -->
-        <test-method status="PASS" signature="t_01changeOrganizationName()[pri:0, instance:involve.me.Tests.OrganizationSettingsTest@1adb7478]" name="t_01changeOrganizationName" duration-ms="5280" started-at="2020-01-23T20:32:28Z" description="change organization name" finished-at="2020-01-23T20:32:33Z">
+        <test-method status="PASS" signature="t_01changeOrganizationName()[pri:0, instance:involve.me.Tests.OrganizationSettingsTest@3956b302]" name="t_01changeOrganizationName" duration-ms="3453" started-at="2020-01-27T18:04:14Z" description="change organization name" finished-at="2020-01-27T18:04:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- t_01changeOrganizationName -->
-        <test-method status="PASS" signature="t_02createNewOrganization()[pri:0, instance:involve.me.Tests.OrganizationSettingsTest@1adb7478]" name="t_02createNewOrganization" duration-ms="857" started-at="2020-01-23T20:32:33Z" description="error message when try create organization" finished-at="2020-01-23T20:32:34Z">
+        <test-method status="PASS" signature="t_02createNewOrganization()[pri:0, instance:involve.me.Tests.OrganizationSettingsTest@3956b302]" name="t_02createNewOrganization" duration-ms="1810" started-at="2020-01-27T18:04:18Z" description="error message when try create organization" finished-at="2020-01-27T18:04:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- t_02createNewOrganization -->
-        <test-method status="PASS" signature="t_03changeOrganization()[pri:0, instance:involve.me.Tests.OrganizationSettingsTest@1adb7478]" name="t_03changeOrganization" duration-ms="1324" started-at="2020-01-23T20:32:34Z" description="change oragnization" finished-at="2020-01-23T20:32:35Z">
+        <test-method status="PASS" signature="t_03changeOrganization()[pri:0, instance:involve.me.Tests.OrganizationSettingsTest@3956b302]" name="t_03changeOrganization" duration-ms="2215" started-at="2020-01-27T18:04:20Z" description="change oragnization" finished-at="2020-01-27T18:04:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- t_03changeOrganization -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:involve.me.Tests.OrganizationSettingsTest@1adb7478]" name="tearDown" is-config="true" duration-ms="626" started-at="2020-01-23T20:32:35Z" finished-at="2020-01-23T20:32:36Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:involve.me.Tests.OrganizationSettingsTest@3956b302]" name="tearDown" is-config="true" duration-ms="714" started-at="2020-01-27T18:04:22Z" finished-at="2020-01-27T18:04:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- involve.me.Tests.OrganizationSettingsTest -->
-      <class name="involve.me.Tests.NewProjectTest">
-        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:involve.me.Tests.NewProjectTest@11a82d0f]" name="setup" is-config="true" duration-ms="11874" started-at="2020-01-23T20:31:29Z" finished-at="2020-01-23T20:31:41Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@6f959640]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setupLogin()[pri:0, instance:involve.me.Tests.NewProjectTest@11a82d0f]" name="setupLogin" is-config="true" duration-ms="5167" started-at="2020-01-23T20:31:41Z" finished-at="2020-01-23T20:31:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupLogin -->
-        <test-method status="PASS" signature="t_01chooseTemplate()[pri:0, instance:involve.me.Tests.NewProjectTest@11a82d0f]" name="t_01chooseTemplate" duration-ms="23755" started-at="2020-01-23T20:31:46Z" description="choose template" finished-at="2020-01-23T20:32:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- t_01chooseTemplate -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:involve.me.Tests.NewProjectTest@11a82d0f]" name="tearDown" is-config="true" duration-ms="659" started-at="2020-01-23T20:32:10Z" finished-at="2020-01-23T20:32:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- involve.me.Tests.NewProjectTest -->
-      <class name="involve.me.Tests.LogInTest">
-        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:involve.me.Tests.LogInTest@64a896b0]" name="setup" is-config="true" duration-ms="31563" started-at="2020-01-23T20:29:58Z" finished-at="2020-01-23T20:30:30Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@6f959640]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setupLogin()[pri:0, instance:involve.me.Tests.LogInTest@64a896b0]" name="setupLogin" is-config="true" duration-ms="8450" started-at="2020-01-23T20:30:30Z" finished-at="2020-01-23T20:30:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupLogin -->
-        <test-method status="PASS" signature="t_01logInSuccess()[pri:0, instance:involve.me.Tests.LogInTest@64a896b0]" name="t_01logInSuccess" duration-ms="80" started-at="2020-01-23T20:30:38Z" description="login success" finished-at="2020-01-23T20:30:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- t_01logInSuccess -->
-        <test-method status="PASS" signature="t_02logInFaild()[pri:0, instance:involve.me.Tests.LogInTest@64a896b0]" name="t_02logInFaild" duration-ms="5822" started-at="2020-01-23T20:30:38Z" description="login faild" finished-at="2020-01-23T20:30:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- t_02logInFaild -->
-        <test-method status="PASS" signature="t_03resetPassFaild()[pri:0, instance:involve.me.Tests.LogInTest@64a896b0]" name="t_03resetPassFaild" duration-ms="1559" started-at="2020-01-23T20:30:44Z" description="reset password faild" finished-at="2020-01-23T20:30:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- t_03resetPassFaild -->
-        <test-method status="PASS" signature="t_04resetPassFaild()[pri:0, instance:involve.me.Tests.LogInTest@64a896b0]" name="t_04resetPassFaild" duration-ms="1691" started-at="2020-01-23T20:30:45Z" description="reset password Success" finished-at="2020-01-23T20:30:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- t_04resetPassFaild -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:involve.me.Tests.LogInTest@64a896b0]" name="tearDown" is-config="true" duration-ms="636" started-at="2020-01-23T20:30:47Z" finished-at="2020-01-23T20:30:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- involve.me.Tests.LogInTest -->
-      <class name="involve.me.Tests.MainTest">
-        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:involve.me.Tests.MainTest@e044b4a]" name="setup" is-config="true" duration-ms="11820" started-at="2020-01-23T20:30:48Z" finished-at="2020-01-23T20:31:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@6f959640]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setupLogin()[pri:0, instance:involve.me.Tests.MainTest@e044b4a]" name="setupLogin" is-config="true" duration-ms="5122" started-at="2020-01-23T20:31:00Z" finished-at="2020-01-23T20:31:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupLogin -->
-        <test-method status="PASS" signature="t_01deleteProject()[pri:0, instance:involve.me.Tests.MainTest@e044b4a]" name="t_01deleteProject" duration-ms="13934" started-at="2020-01-23T20:31:05Z" description="delete project" finished-at="2020-01-23T20:31:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- t_01deleteProject -->
-        <test-method status="PASS" signature="t_02addNewWorkspace()[pri:0, instance:involve.me.Tests.MainTest@e044b4a]" name="t_02addNewWorkspace" duration-ms="2756" started-at="2020-01-23T20:31:19Z" description="add workspace" finished-at="2020-01-23T20:31:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- t_02addNewWorkspace -->
-        <test-method status="PASS" signature="t_03deleteWorkspace()[pri:0, instance:involve.me.Tests.MainTest@e044b4a]" name="t_03deleteWorkspace" duration-ms="1184" started-at="2020-01-23T20:31:21Z" description="delete workspace" finished-at="2020-01-23T20:31:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- t_03deleteWorkspace -->
-        <test-method status="PASS" signature="t_04renameWorkspace()[pri:0, instance:involve.me.Tests.MainTest@e044b4a]" name="t_04renameWorkspace" duration-ms="5547" started-at="2020-01-23T20:31:23Z" description="rename workspace" finished-at="2020-01-23T20:31:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- t_04renameWorkspace -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:involve.me.Tests.MainTest@e044b4a]" name="tearDown" is-config="true" duration-ms="639" started-at="2020-01-23T20:31:28Z" finished-at="2020-01-23T20:31:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- involve.me.Tests.MainTest -->
       <class name="involve.me.Tests.GeneralSettingsTest">
-        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:involve.me.Tests.GeneralSettingsTest@36a7abe1]" name="setup" is-config="true" duration-ms="12908" started-at="2020-01-23T20:29:22Z" finished-at="2020-01-23T20:29:35Z">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:involve.me.Tests.GeneralSettingsTest@3961a41a]" name="setup" is-config="true" duration-ms="12690" started-at="2020-01-27T18:01:25Z" finished-at="2020-01-27T18:01:37Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@6f959640]]>
+                <![CDATA[org.testng.TestRunner@3ff83cc8]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setupLogin()[pri:0, instance:involve.me.Tests.GeneralSettingsTest@36a7abe1]" name="setupLogin" is-config="true" duration-ms="5097" started-at="2020-01-23T20:29:35Z" finished-at="2020-01-23T20:29:40Z">
+        <test-method status="PASS" signature="setupLogin()[pri:0, instance:involve.me.Tests.GeneralSettingsTest@3961a41a]" name="setupLogin" is-config="true" duration-ms="5850" started-at="2020-01-27T18:01:37Z" finished-at="2020-01-27T18:01:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupLogin -->
-        <test-method status="PASS" signature="t_01changeProjectSettings()[pri:0, instance:involve.me.Tests.GeneralSettingsTest@36a7abe1]" name="t_01changeProjectSettings" duration-ms="16889" started-at="2020-01-23T20:29:40Z" description="update settings" finished-at="2020-01-23T20:29:57Z">
+        <test-method status="PASS" signature="t_01changeProjectSettings()[pri:0, instance:involve.me.Tests.GeneralSettingsTest@3961a41a]" name="t_01changeProjectSettings" duration-ms="21649" started-at="2020-01-27T18:01:43Z" description="update settings" finished-at="2020-01-27T18:02:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- t_01changeProjectSettings -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:involve.me.Tests.GeneralSettingsTest@36a7abe1]" name="tearDown" is-config="true" duration-ms="659" started-at="2020-01-23T20:29:57Z" finished-at="2020-01-23T20:29:58Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:involve.me.Tests.GeneralSettingsTest@3961a41a]" name="tearDown" is-config="true" duration-ms="702" started-at="2020-01-27T18:02:05Z" finished-at="2020-01-27T18:02:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- involve.me.Tests.GeneralSettingsTest -->
-      <class name="involve.me.Tests.YourAccountTest">
-        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:involve.me.Tests.YourAccountTest@3ae66c85]" name="setup" is-config="true" duration-ms="11903" started-at="2020-01-23T20:32:36Z" finished-at="2020-01-23T20:32:48Z">
+      <class name="involve.me.Tests.MainTest">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:involve.me.Tests.MainTest@367795c7]" name="setup" is-config="true" duration-ms="10684" started-at="2020-01-27T18:02:36Z" finished-at="2020-01-27T18:02:46Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@6f959640]]>
+                <![CDATA[org.testng.TestRunner@3ff83cc8]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setupLogin()[pri:0, instance:involve.me.Tests.YourAccountTest@3ae66c85]" name="setupLogin" is-config="true" duration-ms="5073" started-at="2020-01-23T20:32:48Z" finished-at="2020-01-23T20:32:53Z">
+        <test-method status="PASS" signature="setupLogin()[pri:0, instance:involve.me.Tests.MainTest@367795c7]" name="setupLogin" is-config="true" duration-ms="5429" started-at="2020-01-27T18:02:46Z" finished-at="2020-01-27T18:02:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupLogin -->
-        <test-method status="PASS" signature="t_01updateInformation()[pri:0, instance:involve.me.Tests.YourAccountTest@3ae66c85]" name="t_01updateInformation" duration-ms="7615" started-at="2020-01-23T20:32:53Z" description="update account Information" finished-at="2020-01-23T20:33:00Z">
+        <test-method status="PASS" signature="t_01deleteProject()[pri:0, instance:involve.me.Tests.MainTest@367795c7]" name="t_01deleteProject" duration-ms="14018" started-at="2020-01-27T18:02:52Z" description="delete project" finished-at="2020-01-27T18:03:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- t_01deleteProject -->
+        <test-method status="PASS" signature="t_02addNewWorkspace()[pri:0, instance:involve.me.Tests.MainTest@367795c7]" name="t_02addNewWorkspace" duration-ms="1273" started-at="2020-01-27T18:03:06Z" description="add workspace" finished-at="2020-01-27T18:03:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- t_02addNewWorkspace -->
+        <test-method status="PASS" signature="t_03deleteWorkspace()[pri:0, instance:involve.me.Tests.MainTest@367795c7]" name="t_03deleteWorkspace" duration-ms="4796" started-at="2020-01-27T18:03:07Z" description="delete workspace" finished-at="2020-01-27T18:03:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- t_03deleteWorkspace -->
+        <test-method status="PASS" signature="t_04renameWorkspace()[pri:0, instance:involve.me.Tests.MainTest@367795c7]" name="t_04renameWorkspace" duration-ms="7170" started-at="2020-01-27T18:03:12Z" description="rename workspace" finished-at="2020-01-27T18:03:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- t_04renameWorkspace -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:involve.me.Tests.MainTest@367795c7]" name="tearDown" is-config="true" duration-ms="745" started-at="2020-01-27T18:03:19Z" finished-at="2020-01-27T18:03:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- involve.me.Tests.MainTest -->
+      <class name="involve.me.Tests.LogInTest">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:involve.me.Tests.LogInTest@5a4ed68f]" name="setup" is-config="true" duration-ms="10495" started-at="2020-01-27T18:02:06Z" finished-at="2020-01-27T18:02:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@3ff83cc8]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setupLogin()[pri:0, instance:involve.me.Tests.LogInTest@5a4ed68f]" name="setupLogin" is-config="true" duration-ms="6292" started-at="2020-01-27T18:02:17Z" finished-at="2020-01-27T18:02:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupLogin -->
+        <test-method status="PASS" signature="t_01logInSuccess()[pri:0, instance:involve.me.Tests.LogInTest@5a4ed68f]" name="t_01logInSuccess" duration-ms="264" started-at="2020-01-27T18:02:23Z" description="login success" finished-at="2020-01-27T18:02:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- t_01logInSuccess -->
+        <test-method status="PASS" signature="t_02logInFaild()[pri:0, instance:involve.me.Tests.LogInTest@5a4ed68f]" name="t_02logInFaild" duration-ms="6283" started-at="2020-01-27T18:02:23Z" description="login faild" finished-at="2020-01-27T18:02:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- t_02logInFaild -->
+        <test-method status="PASS" signature="t_03resetPassFaild()[pri:0, instance:involve.me.Tests.LogInTest@5a4ed68f]" name="t_03resetPassFaild" duration-ms="2504" started-at="2020-01-27T18:02:29Z" description="reset password faild" finished-at="2020-01-27T18:02:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- t_03resetPassFaild -->
+        <test-method status="PASS" signature="t_04resetPassFaild()[pri:0, instance:involve.me.Tests.LogInTest@5a4ed68f]" name="t_04resetPassFaild" duration-ms="2890" started-at="2020-01-27T18:02:32Z" description="reset password Success" finished-at="2020-01-27T18:02:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- t_04resetPassFaild -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:involve.me.Tests.LogInTest@5a4ed68f]" name="tearDown" is-config="true" duration-ms="775" started-at="2020-01-27T18:02:35Z" finished-at="2020-01-27T18:02:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- involve.me.Tests.LogInTest -->
+      <class name="involve.me.Tests.NewProjectTest">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:involve.me.Tests.NewProjectTest@d2387c8]" name="setup" is-config="true" duration-ms="12647" started-at="2020-01-27T18:03:20Z" finished-at="2020-01-27T18:03:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@3ff83cc8]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setupLogin()[pri:0, instance:involve.me.Tests.NewProjectTest@d2387c8]" name="setupLogin" is-config="true" duration-ms="5063" started-at="2020-01-27T18:03:32Z" finished-at="2020-01-27T18:03:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupLogin -->
+        <test-method status="PASS" signature="t_01chooseTemplate()[pri:0, instance:involve.me.Tests.NewProjectTest@d2387c8]" name="t_01chooseTemplate" duration-ms="18176" started-at="2020-01-27T18:03:38Z" description="choose template" finished-at="2020-01-27T18:03:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- t_01chooseTemplate -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:involve.me.Tests.NewProjectTest@d2387c8]" name="tearDown" is-config="true" duration-ms="769" started-at="2020-01-27T18:03:56Z" finished-at="2020-01-27T18:03:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- involve.me.Tests.NewProjectTest -->
+      <class name="involve.me.Tests.YourAccountTest">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:involve.me.Tests.YourAccountTest@1500e009]" name="setup" is-config="true" duration-ms="10622" started-at="2020-01-27T18:04:23Z" finished-at="2020-01-27T18:04:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@3ff83cc8]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setupLogin()[pri:0, instance:involve.me.Tests.YourAccountTest@1500e009]" name="setupLogin" is-config="true" duration-ms="6067" started-at="2020-01-27T18:04:33Z" finished-at="2020-01-27T18:04:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupLogin -->
+        <test-method status="PASS" signature="t_01updateInformation()[pri:0, instance:involve.me.Tests.YourAccountTest@1500e009]" name="t_01updateInformation" duration-ms="5736" started-at="2020-01-27T18:04:39Z" description="update account Information" finished-at="2020-01-27T18:04:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- t_01updateInformation -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:involve.me.Tests.YourAccountTest@3ae66c85]" name="tearDown" is-config="true" duration-ms="638" started-at="2020-01-23T20:33:00Z" finished-at="2020-01-23T20:33:01Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:involve.me.Tests.YourAccountTest@1500e009]" name="tearDown" is-config="true" duration-ms="734" started-at="2020-01-27T18:04:45Z" finished-at="2020-01-27T18:04:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

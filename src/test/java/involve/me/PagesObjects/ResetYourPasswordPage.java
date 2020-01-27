@@ -3,6 +3,8 @@ package involve.me.PagesObjects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.qameta.allure.Step;
 
@@ -34,6 +36,8 @@ public class ResetYourPasswordPage extends BasePage {
 
 	@Step("get success message")
 	public String resetPassSuccessMessage() {
+		WebDriverWait wait = new WebDriverWait(driver, 15);
+		wait.until(ExpectedConditions.elementToBeClickable(resetPasswordSuccessMessage));
 		return getText(resetPasswordSuccessMessage);
 	}
 }

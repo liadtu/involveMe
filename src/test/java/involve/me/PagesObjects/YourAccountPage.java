@@ -3,6 +3,8 @@ package involve.me.PagesObjects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.qameta.allure.Step;
 
@@ -27,7 +29,8 @@ public class YourAccountPage extends BasePage{
 	@Step("update account information {firstName} {lastName}")
 	public void updateInformation(String firstName, String lastName) {
 		click(updateInformationButton);
-		sleep(2000);
+		WebDriverWait wait = new WebDriverWait(driver, 15);
+		wait.until(ExpectedConditions.elementToBeClickable(firstNameField));
 		fillText(firstNameField, firstName);
 		fillText(lastNameField, lastName);
 		click(updateButton);

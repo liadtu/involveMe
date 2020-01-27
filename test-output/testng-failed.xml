@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="involve.me.Tests.NewProjectTest">
+      <class name="involve.me.Tests.MainTest">
         <methods>
           <include name="setup"/>
           <include name="setupLogin"/>
           <include name="tearDown"/>
-          <include name="t_01chooseTemplate"/>
+          <include name="t_04renameWorkspace"/>
         </methods>
-      </class> <!-- involve.me.Tests.NewProjectTest -->
+      </class> <!-- involve.me.Tests.MainTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

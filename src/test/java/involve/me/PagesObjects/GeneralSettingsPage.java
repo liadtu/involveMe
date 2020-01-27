@@ -3,7 +3,9 @@ package involve.me.PagesObjects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.qameta.allure.Step;
 
@@ -20,8 +22,10 @@ public class GeneralSettingsPage extends BasePage{
 		super(driver);
 	}
 	
-	@Step("slecet account setting project name = {projectname } and language value {languagevalue}")
+	@Step("slecet account setting project name = {projectName} and language value {selectLanguageValue}")
 	public void updateSetting(String projectName, String selectLanguageValue) {
+		WebDriverWait wait = new WebDriverWait(driver, 15);
+		wait.until(ExpectedConditions.elementToBeClickable(projectNameField));
 		fillText(projectNameField, projectName);
 		WebElement el = selectDefaultLanguage;
 		Select selectPriority = new Select(el);

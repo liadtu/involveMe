@@ -7,6 +7,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.qameta.allure.Step;
 
@@ -39,11 +42,12 @@ public class OrganizationSettingPage extends BasePage {
 		click(editButton);
 		fillText(organizationNameField, organizationName);
 		click(createButton);
-		sleep(1000);
 	}
 	
 	@Step("check organizationName")
 	public String organizationName() {
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.elementToBeClickable(organizationName));
 		return getText(organizationName);
 	}
 	
@@ -60,12 +64,19 @@ public class OrganizationSettingPage extends BasePage {
 	@Step("enter not available name for organization")
 	public void createOrganization(String organizationName) {
 		click(createNewOrganizationButton);
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.elementToBeClickable(organizationNameField));
 		fillText(organizationNameField, organizationName);
 	}
 	
 	@Step("check 'not available' message")
 	public String notAvailable() {
-		sleep(500);
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+		wait.until(new ExpectedCondition<Boolean>() {
+            public Boolean apply(WebDriver driver) {
+                return !(notAvailableMessage.getText().contains("checking..."));
+            }
+        });
 		return getText(notAvailableMessage);
 	}
 	
@@ -84,6 +95,8 @@ public class OrganizationSettingPage extends BasePage {
 	
 	@Step("click cancel button")
 	public void cancelCreateOrganization() {
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.elementToBeClickable(cancelButton));
 		click(cancelButton);
 	}
 	

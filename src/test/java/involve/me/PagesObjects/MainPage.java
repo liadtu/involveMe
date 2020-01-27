@@ -3,6 +3,7 @@ package involve.me.PagesObjects;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -31,14 +32,18 @@ public class MainPage extends BasePage {
 	private WebElement openMenuAccount;
 	@FindBy(css = ".max-w-6xl.mx-auto.flex.items-center.justify-between.flex-wrap ul > li")
 	private List<WebElement> menuAccountOptions;
+	@FindBy(css = ".w-full.hidden ul")
+	private WebElement menuAccount;
 	// choose tabs
 	@FindBy(css = ".text-sm.flex.items-start > a")
 	private List<WebElement> tabList;
+	@FindBy(css=".text-sm.flex.items-start")
+	private WebElement tabs;
 	// choose project
-	@FindBy(css = ".mt-8 > .relative h1")
+	@FindBy(css = "h1 > a")
 	private List<WebElement> chooseProjectList;
-	@FindBy(css = ".flex.justify-right.items-center > a > .fill-current")
-	private List<WebElement> editProjectList;
+	@FindBy(css = ".flex.justify-right > a")
+	private WebElement editProject;
 	@FindBy(css = ".mt-8 > .relative h1")
 	private WebElement projectName;
 	// add workspace
@@ -54,6 +59,8 @@ public class MainPage extends BasePage {
 	private WebElement openWorkspaceMenu;
 	@FindBy(css = ".dropdown.relative.mr-3 > ul > li")
 	private List<WebElement> chooseFromWorkspaceList;
+	@FindBy(css = ".dropdown.relative.mr-3 > ul")
+	private WebElement workspaceMenu;
 	@FindBy(css = "[placeholder='workspaceLiadTest']")
 	private WebElement deleteWorkspaceNameField;
 	@FindBy(css = "#confirm-create-button")
@@ -64,6 +71,11 @@ public class MainPage extends BasePage {
 	private WebElement renameButton;
 	@FindBy(css = ".text-gray-900")
 	private WebElement workspaceName;
+	
+	
+	@FindBy(xpath = "//button[text()='Rename Workspace']")
+	private WebElement renameWorkspaceButton;
+	
 
 	public MainPage(WebDriver driver) {
 		super(driver);
@@ -86,7 +98,9 @@ public class MainPage extends BasePage {
 
 	@Step("check counter projects")
 	public int totalProjects() {
-		WebDriverWait wait = new WebDriverWait(driver, 15); wait.until(ExpectedConditions.elementToBeClickable(totalMyWorkspace));
+		WebDriverWait wait = new WebDriverWait(driver, 15);
+		wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".text-gray-900")));
+		sleep(1000);
 		String total = getText(totalMyWorkspace);
 		int num = Integer.parseInt(total);
 		System.out.println("The number of tasks: " + num);
@@ -96,11 +110,11 @@ public class MainPage extends BasePage {
 	@Step("open account menu and choose one option from menu {chooseFromOptions}")
 	public void yourAccountOption(String chooseFromOptions) {
 		click(openMenuAccount);
-		sleep(1000);
+		WebDriverWait wait = new WebDriverWait(driver, 15);
+		wait.until(ExpectedConditions.elementToBeClickable(menuAccount));
 		for (WebElement el : menuAccountOptions) {
 			if (el.getText().equalsIgnoreCase(chooseFromOptions)) {
 				el.click();
-				sleep(2000);
 				break;
 			}
 		}
@@ -112,7 +126,6 @@ public class MainPage extends BasePage {
 		for (WebElement el : menuAccountOptions) {
 			if (el.getText().equalsIgnoreCase(chooseFromOptions)) {
 				el.click();
-				sleep(2000);
 				break;
 			}
 		}
@@ -122,8 +135,8 @@ public class MainPage extends BasePage {
 	public void chooseTab(String chooseTab) {
 		for (WebElement el : tabList) {
 			if (el.getText().equalsIgnoreCase(chooseTab)) {
-				el.click();
 				sleep(2000);
+				el.click();
 				break;
 			}
 		}
@@ -131,14 +144,17 @@ public class MainPage extends BasePage {
 
 	@Step("click on edit button for project {chooseProject}")
 	public void editProject(String chooseProject) {
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.elementToBeClickable(editProject));
 		for (int i = 0; i < chooseProjectList.size(); i++) {
 			if (chooseProjectList.get(i).getText().equalsIgnoreCase(chooseProject)) {
-				click(editProjectList.get(i));
+				click(editProject);
+				break;
 			}
 		}
 	}
 
-	@Step("delete project: {chooseProject}")
+	@Step("open the menu project of {chooseProject} and choose {chooseFromProjectMenu} ")
 	public void deleteProject(String chooseProject, String chooseFromProjectMenu) {
 		for (int i = 0; i < chooseProjectList.size(); i++) {
 			if (chooseProjectList.get(i).getText().equalsIgnoreCase(chooseProject)) {
@@ -149,9 +165,9 @@ public class MainPage extends BasePage {
 		for (WebElement el : menuProject) {
 			if (el.getText().equalsIgnoreCase(chooseFromProjectMenu)) {
 				el.click();
-				sleep(1000);
+				WebDriverWait wait = new WebDriverWait(driver, 15);
+				wait.until(ExpectedConditions.elementToBeClickable(deleteButton));
 				click(deleteButton);
-				sleep(1000);
 				break;
 			}
 		}
@@ -159,15 +175,18 @@ public class MainPage extends BasePage {
 
 	@Step("add new workspace {workspaceName}")
 	public void addWorkspace(String workspaceName) {
+		WebDriverWait wait = new WebDriverWait(driver, 15);
+		wait.until(ExpectedConditions.elementToBeClickable(addWorkspaceButton));
 		click(addWorkspaceButton);
 		fillText(workspaceNameField, workspaceName);
 		click(createButton);
-		sleep(2000);
 	}
 
 	@Step("check counter workspace")
 	public int getWorkspaces(String workspaceName) {
 		ArrayList<String> workspaces = new ArrayList<>();
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+		wait.until((ExpectedCondition<Boolean>) driver -> chooseWorkspaceList.size() > 0);
 		for (int i = 0; i < chooseWorkspaceList.size(); i++) {
 			if (chooseWorkspaceList.get(i).getText().equalsIgnoreCase(workspaceName)) {
 				workspaces.add(chooseWorkspaceList.get(i).getText());
@@ -180,7 +199,7 @@ public class MainPage extends BasePage {
 	public int getWorkspacesRemove(String workspaceName) {
 		ArrayList<String> workspaces = new ArrayList<>();
 		WebDriverWait wait = new WebDriverWait(driver, 15);
-		wait.until((ExpectedCondition<Boolean>) driver -> chooseWorkspaceList.size() > 1);
+		wait.until((ExpectedCondition<Boolean>) driver -> chooseWorkspaceList.size() > 0);
 		for (int i = 0; i < chooseWorkspaceList.size(); i++) {
 			if (chooseWorkspaceList.get(i).getText().equalsIgnoreCase(workspaceName)) {
 				workspaces.remove(chooseWorkspaceList.get(i).getText());
@@ -190,38 +209,38 @@ public class MainPage extends BasePage {
 	}
 
 	@Step("delete workspace: {workspaceName}")
-	public void deleteWorkspace(String workspaceName, String workspaceMenu, String deleteWorkspaceName) {
+	public void deleteWorkspace(String workspaceName, String chooseFromWorkspaceMenu, String deleteWorkspaceName) {
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.elementToBeClickable(openWorkspaceMenu));
 		for (int i = 0; i < chooseWorkspaceList.size(); i++) {
 			if (chooseWorkspaceList.get(i).getText().equalsIgnoreCase(workspaceName)) {
 				click(chooseWorkspaceList.get(i));
 			}
+			wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("[data-icon='chevron-down']")));
 			click(openWorkspaceMenu);
 		}
 		for (int i = 0; i < chooseFromWorkspaceList.size(); i++) {
-			if (chooseFromWorkspaceList.get(i).getText().equalsIgnoreCase(workspaceMenu)) {
+			wait.until(ExpectedConditions.elementToBeClickable(workspaceMenu));
+			if (chooseFromWorkspaceList.get(i).getText().equalsIgnoreCase(chooseFromWorkspaceMenu)) {
 				click(chooseFromWorkspaceList.get(i));
 			}
 		}
+		wait.until(ExpectedConditions.elementToBeClickable(deleteWorkspaceNameField));
 		fillText(deleteWorkspaceNameField, deleteWorkspaceName);
+		wait.until(ExpectedConditions.elementToBeClickable(deleteWorkspaceButton));
 		click(deleteWorkspaceButton);
 	}
 
 	@Step("rename woekspace {workspaceNameNew}")
-	public void renameWorkspace(String workspaceMenu, String workspaceNameNew) {
+	public void renameWorkspace(String workspaceNameNew) {
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.elementToBeClickable(openWorkspaceMenu));
 		click(openWorkspaceMenu);
-		sleep(1000);
-
-		for (WebElement el : chooseFromWorkspaceList) {
-			if (el.getText().equalsIgnoreCase(workspaceMenu)) {
-				el.click();
-				break;
-			}	
-		}
-		sleep(1000);
+		click(renameWorkspaceButton);
+		wait.until(ExpectedConditions.elementToBeClickable(renameWorkspaceField));
 		fillText(renameWorkspaceField, workspaceNameNew);
-		sleep(1000);
+		wait.until(ExpectedConditions.elementToBeClickable(renameButton));
 		click(renameButton);
-		sleep(1000);
 	}
 
 	@Step("check workspace name")
@@ -234,13 +253,11 @@ public class MainPage extends BasePage {
 		for (int i = 0; i < chooseProjectList.size(); i++) {
 			if (chooseProjectList.get(i).getText().equalsIgnoreCase(chooseProject)) {
 				click(openMenuProject.get(i));
-				sleep(1000);
 				break;
 			}
 		}
 		for (WebElement el : menuProject) {
 			if (el.getText().equalsIgnoreCase(chooseFromProjectMenu)) {
-				sleep(1000);
 				el.click();
 				break;
 			}
