@@ -41,13 +41,13 @@ public class OrganizationSettingPage extends BasePage {
 	public void editOrganization(String organizationName) {
 		click(editButton);
 		fillText(organizationNameField, organizationName);
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.elementToBeClickable(createButton));
 		click(createButton);
 	}
 	
 	@Step("check organizationName")
 	public String organizationName() {
-		WebDriverWait wait = new WebDriverWait(driver, 30);
-		wait.until(ExpectedConditions.elementToBeClickable(organizationName));
 		return getText(organizationName);
 	}
 	

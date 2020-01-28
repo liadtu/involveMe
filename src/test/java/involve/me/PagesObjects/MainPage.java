@@ -37,7 +37,7 @@ public class MainPage extends BasePage {
 	// choose tabs
 	@FindBy(css = ".text-sm.flex.items-start > a")
 	private List<WebElement> tabList;
-	@FindBy(css=".text-sm.flex.items-start")
+	@FindBy(css = ".text-sm.flex.items-start")
 	private WebElement tabs;
 	// choose project
 	@FindBy(css = "h1 > a")
@@ -55,6 +55,8 @@ public class MainPage extends BasePage {
 	private WebElement createButton;
 	@FindBy(css = ".mt-6.leading-loose .mr-3.truncate")
 	private List<WebElement> chooseWorkspaceList;
+	@FindBy(css = ".mt-6.leading-loose")
+	private WebElement workspaceList;
 	@FindBy(css = "[data-icon='chevron-down']")
 	private WebElement openWorkspaceMenu;
 	@FindBy(css = ".dropdown.relative.mr-3 > ul > li")
@@ -64,18 +66,18 @@ public class MainPage extends BasePage {
 	@FindBy(css = "[placeholder='workspaceLiadTest']")
 	private WebElement deleteWorkspaceNameField;
 	@FindBy(css = "#confirm-create-button")
-	private WebElement deleteWorkspaceButton;
+	private WebElement deleteWorkButton;
 	@FindBy(css = ".vue-portal-target input")
 	private WebElement renameWorkspaceField;
 	@FindBy(css = "#confirm-create-button")
 	private WebElement renameButton;
 	@FindBy(css = ".text-gray-900")
 	private WebElement workspaceName;
-	
-	
+
 	@FindBy(xpath = "//button[text()='Rename Workspace']")
 	private WebElement renameWorkspaceButton;
-	
+	@FindBy(xpath = "//button[text()='Delete Workspace']")
+	private WebElement deleteWorkspaceButton;
 
 	public MainPage(WebDriver driver) {
 		super(driver);
@@ -209,26 +211,22 @@ public class MainPage extends BasePage {
 	}
 
 	@Step("delete workspace: {workspaceName}")
-	public void deleteWorkspace(String workspaceName, String chooseFromWorkspaceMenu, String deleteWorkspaceName) {
+	public void deleteWorkspace(String workspaceName, String deleteWorkspaceName) {
 		WebDriverWait wait = new WebDriverWait(driver, 30);
-		wait.until(ExpectedConditions.elementToBeClickable(openWorkspaceMenu));
+		wait.until(ExpectedConditions.elementToBeClickable(workspaceList));
 		for (int i = 0; i < chooseWorkspaceList.size(); i++) {
 			if (chooseWorkspaceList.get(i).getText().equalsIgnoreCase(workspaceName)) {
 				click(chooseWorkspaceList.get(i));
 			}
-			wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("[data-icon='chevron-down']")));
+			wait.until(ExpectedConditions.elementToBeClickable(openWorkspaceMenu));
 			click(openWorkspaceMenu);
 		}
-		for (int i = 0; i < chooseFromWorkspaceList.size(); i++) {
-			wait.until(ExpectedConditions.elementToBeClickable(workspaceMenu));
-			if (chooseFromWorkspaceList.get(i).getText().equalsIgnoreCase(chooseFromWorkspaceMenu)) {
-				click(chooseFromWorkspaceList.get(i));
-			}
-		}
-		wait.until(ExpectedConditions.elementToBeClickable(deleteWorkspaceNameField));
-		fillText(deleteWorkspaceNameField, deleteWorkspaceName);
 		wait.until(ExpectedConditions.elementToBeClickable(deleteWorkspaceButton));
 		click(deleteWorkspaceButton);
+		wait.until(ExpectedConditions.elementToBeClickable(deleteWorkspaceNameField));
+		fillText(deleteWorkspaceNameField, deleteWorkspaceName);
+		wait.until(ExpectedConditions.elementToBeClickable(deleteWorkButton));
+		click(deleteWorkButton);
 	}
 
 	@Step("rename woekspace {workspaceNameNew}")

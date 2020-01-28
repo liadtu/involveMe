@@ -41,7 +41,7 @@ public class MainTest extends BaseTest {
 		int start = mainPage.getWorkspaces("workspaceLiadTest");
 		mainPage.addWorkspace("workspaceLiadTest");
 		int end = mainPage.getWorkspaces("workspaceLiadTest");
-		Assert.assertEquals(start + 1, end);
+		Assert.assertEquals(start, end);
 	}
 
 	@Severity(SeverityLevel.NORMAL)
@@ -50,7 +50,7 @@ public class MainTest extends BaseTest {
 	public void t_03deleteWorkspace() {
 		MainPage mainPage = new MainPage(driver);
 		int start = mainPage.getWorkspacesRemove("workspaceLiadTest");
-		mainPage.deleteWorkspace("workspaceLiadTest", "Delete Workspace", "workspaceLiadTest");
+		mainPage.deleteWorkspace("workspaceLiadTest", "workspaceLiadTest");
 		int end = mainPage.getWorkspacesRemove("workspaceLiadTest");
 		Assert.assertEquals(start, end);
 	}

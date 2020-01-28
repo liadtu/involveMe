@@ -10,7 +10,7 @@ import io.qameta.allure.Step;
 
 public class NewProjectPage extends BasePage {
 
-	@FindBy(css = "#project-name")
+	@FindBy(css = "#new-project-form #project-name")
 	private WebElement projectNameField;
 	@FindBy(css = ".swal-button.swal-button--confirm")
 	private WebElement startEditingButton;
@@ -23,7 +23,7 @@ public class NewProjectPage extends BasePage {
 
 	@Step("type name for new project = {projectName} and after create project click saveAndExitButton")
 	public void createNewProject(String projectName) {
-		WebDriverWait wait = new WebDriverWait(driver, 15);
+		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.elementToBeClickable(projectNameField));
 		fillText(projectNameField, projectName);
 		click(startEditingButton);
