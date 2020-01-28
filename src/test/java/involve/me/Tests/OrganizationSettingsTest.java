@@ -10,8 +10,8 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import utilities.AllureAttachment;
 
-public class OrganizationSettingsTest extends BaseTest{
-	
+public class OrganizationSettingsTest extends BaseTest {
+
 	@Severity(SeverityLevel.NORMAL)
 	@Description("edit organization name")
 	@Test(description = "change organization name")
@@ -26,7 +26,7 @@ public class OrganizationSettingsTest extends BaseTest{
 		System.out.println(expected);
 		Assert.assertEquals("Liad", expected);
 	}
-	
+
 	@Severity(SeverityLevel.NORMAL)
 	@Description("check that can't create new organization if name don't valid")
 	@Test(description = "error message when try create organization")
@@ -36,8 +36,8 @@ public class OrganizationSettingsTest extends BaseTest{
 		String exepted = organizationSetting.notAvailable();
 		System.out.println(exepted);
 		Assert.assertEquals("not available", exepted);
-	}	
-	
+	}
+
 	@Severity(SeverityLevel.NORMAL)
 	@Description("change oragnization")
 	@Test(description = "change oragnization")
@@ -48,5 +48,5 @@ public class OrganizationSettingsTest extends BaseTest{
 		MainPage mainPage = new MainPage(driver);
 		String exepted = mainPage.accountName();
 		Assert.assertEquals("newO", exepted);
-	}	
+	}
 }

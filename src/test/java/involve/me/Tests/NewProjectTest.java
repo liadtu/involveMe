@@ -10,8 +10,8 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 
-public class NewProjectTest extends BaseTest{
-	
+public class NewProjectTest extends BaseTest {
+
 	@Severity(SeverityLevel.NORMAL)
 	@Description("choose template and create new project")
 	@Test(description = "choose template")
@@ -24,7 +24,7 @@ public class NewProjectTest extends BaseTest{
 		templatesPage.getRowForItem("Get Free Kit Lead Page");
 		NewProjectPage newProjectPage = new NewProjectPage(driver);
 		newProjectPage.createNewProject("liad");
-		int afterCreateProject = mainPage.totalProjects(); 
-		Assert.assertEquals(afterCreateProject , beforeCreateProject + 1);
+		int afterCreateProject = mainPage.totalProjects();
+		Assert.assertEquals(afterCreateProject, beforeCreateProject + 1);
 	}
 }

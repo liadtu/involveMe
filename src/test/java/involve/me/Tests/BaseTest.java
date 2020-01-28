@@ -13,7 +13,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
 	WebDriver driver;
-	
+
 	@BeforeClass
 	public void setup(ITestContext testContext) {
 		WebDriverManager.chromedriver().setup();
@@ -22,7 +22,7 @@ public class BaseTest {
 		driver.manage().window().maximize();
 		driver.get("https://app.involve.me/login");
 	}
-	
+
 	@BeforeClass
 	public void setupLogin() {
 		LogInPage loginPage = new LogInPage(driver);
@@ -30,7 +30,7 @@ public class BaseTest {
 		OrganizationSettingPage organizationSetting = new OrganizationSettingPage(driver);
 		organizationSetting.chooseOrganization("Liad");
 	}
-	
+
 	@AfterClass
 	public void tearDown() {
 		driver.quit();

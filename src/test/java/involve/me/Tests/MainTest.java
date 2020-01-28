@@ -17,7 +17,7 @@ public class MainTest extends BaseTest {
 	@Link("www.ggogle.co.il")
 	@Severity(SeverityLevel.NORMAL)
 	@Description("add and delete project from workspace")
-	@Test(enabled = false, description = "delete project")
+	@Test(description = "delete project")
 	public void t_01deleteProject() throws InterruptedException {
 		MainPage mainPage = new MainPage(driver);
 		mainPage.createProject();
@@ -35,7 +35,7 @@ public class MainTest extends BaseTest {
 
 	@Severity(SeverityLevel.NORMAL)
 	@Description("add new workspace")
-	@Test(enabled = false, description = "add workspace")
+	@Test(description = "add workspace")
 	public void t_02addNewWorkspace() {
 		MainPage mainPage = new MainPage(driver);
 		int start = mainPage.getWorkspaces("workspaceLiadTest");
@@ -46,7 +46,7 @@ public class MainTest extends BaseTest {
 
 	@Severity(SeverityLevel.NORMAL)
 	@Description("delete workspace")
-	@Test(enabled = false, description = "delete workspace")
+	@Test(description = "delete workspace")
 	public void t_03deleteWorkspace() {
 		MainPage mainPage = new MainPage(driver);
 		int start = mainPage.getWorkspacesRemove("workspaceLiadTest");
@@ -57,7 +57,7 @@ public class MainTest extends BaseTest {
 
 	@Severity(SeverityLevel.NORMAL)
 	@Description("rename workspace")
-	@Test(enabled = true, description = "rename workspace")
+	@Test(description = "rename workspace")
 	public void t_04renameWorkspace() {
 		MainPage mainPage = new MainPage(driver);
 		mainPage.renameWorkspace("Liad");

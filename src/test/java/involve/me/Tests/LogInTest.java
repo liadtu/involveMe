@@ -11,7 +11,7 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 
 public class LogInTest extends BaseTest {
-	
+
 	@Severity(SeverityLevel.NORMAL)
 	@Description("type valid values in email and password fields in login page")
 	@Test(description = "login success")
@@ -34,7 +34,7 @@ public class LogInTest extends BaseTest {
 		System.out.println(expected);
 		Assert.assertEquals("These credentials do not match our records.", expected);
 	}
-	
+
 	@Severity(SeverityLevel.NORMAL)
 	@Description("click forgot password and check that get error message after type unvalid email")
 	@Test(description = "reset password faild")
@@ -46,7 +46,7 @@ public class LogInTest extends BaseTest {
 		String expected = resetYourPassword.errorResetPassMessage();
 		Assert.assertEquals("We can't find a user with that e-mail address.", expected);
 	}
-	
+
 	@Severity(SeverityLevel.NORMAL)
 	@Description("click forgot password and check that get success message after type valid email")
 	@Test(description = "reset password Success")
@@ -54,7 +54,9 @@ public class LogInTest extends BaseTest {
 		ResetYourPasswordPage resetYourPassword = new ResetYourPasswordPage(driver);
 		resetYourPassword.resetPassword("liadtu@gmail.com");
 		String expected = resetYourPassword.resetPassSuccessMessage();
-		Assert.assertEquals("A reset link has been sent to the email address, if it has been used to register for an account.", expected);
+		Assert.assertEquals(
+				"A reset link has been sent to the email address, if it has been used to register for an account.",
+				expected);
 	}
 
 }

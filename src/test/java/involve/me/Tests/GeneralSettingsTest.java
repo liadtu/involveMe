@@ -12,7 +12,7 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 
-public class GeneralSettingsTest extends BaseTest{
+public class GeneralSettingsTest extends BaseTest {
 
 	@Severity(SeverityLevel.NORMAL)
 	@Description("create new project and update settings for project")
