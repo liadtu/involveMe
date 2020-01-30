@@ -73,11 +73,18 @@ public class MainPage extends BasePage {
 	private WebElement renameButton;
 	@FindBy(css = ".text-gray-900")
 	private WebElement workspaceName;
-
 	@FindBy(xpath = "//button[text()='Rename Workspace']")
 	private WebElement renameWorkspaceButton;
 	@FindBy(xpath = "//button[text()='Delete Workspace']")
 	private WebElement deleteWorkspaceButton;
+	@FindBy(css = ".text-indigo-600")
+	private WebElement complateProjectTab;
+	@FindBy(css = ".flex-col > h1")
+	private WebElement noProjectMessage;
+	@FindBy(css = "[data-icon='search']")
+	private WebElement searchButton;
+	@FindBy(css=".rounded.h-8.bg-transparent")
+	private WebElement searchProjectField;
 
 	public MainPage(WebDriver driver) {
 		super(driver);
@@ -260,5 +267,21 @@ public class MainPage extends BasePage {
 				break;
 			}
 		}
+	}
+
+	@Step("move to complate project tab")
+	public void moveToCompleteTab() {
+		click(complateProjectTab);
+	}
+
+	@Step("check that appear message if don't projects in tab")
+	public String noProjectMatchesMessage() {
+		return getText(noProjectMessage);
+	}
+
+	@Step("search project")
+	public void search(String projectName) {
+		click(searchButton);
+		fillText(searchProjectField, projectName);
 	}
 }

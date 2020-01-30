@@ -6,17 +6,18 @@ import org.openqa.selenium.support.FindBy;
 
 import io.qameta.allure.Step;
 
-public class AnalyticsPage extends BasePage {
+public class IntegrationsPage extends BasePage{
 
-	public AnalyticsPage(WebDriver driver) {
+	public IntegrationsPage(WebDriver driver) {
 		super(driver);
 	}
-
-	@FindBy(css = ".e-title")
-	private WebElement titleOfPage;
-
+	
+	@FindBy(css=".e-title")
+	private WebElement titlePage;
+	
 	@Step("check the title of the page")
 	public String title() {
-		return getText(titleOfPage);
+		return getText(titlePage);
 	}
+
 }

@@ -21,7 +21,16 @@ public class YourAccountTest extends BaseTest {
 		YourAccountPage yourAccountPage = new YourAccountPage(driver);
 		yourAccountPage.updateInformation("liad", "Tobi");
 		String expected = yourAccountPage.accountName();
-		System.out.println(expected);
 		Assert.assertEquals("liad Tobi", expected);
+	}
+
+	@Severity(SeverityLevel.NORMAL)
+	@Description("open account menu and update account information")
+	@Test(description = "update account Information")
+	public void t_02changePassword() {
+		YourAccountPage yourAccountPage = new YourAccountPage(driver);
+		yourAccountPage.changePassword("Liad924799", "Liad924799", "Liad924799");
+		String expected = yourAccountPage.successChangePasswordMessage();
+		Assert.assertEquals("Password successfully updated.", expected);
 	}
 }

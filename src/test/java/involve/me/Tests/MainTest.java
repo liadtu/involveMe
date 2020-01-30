@@ -64,4 +64,24 @@ public class MainTest extends BaseTest {
 		String expected = mainPage.workspaceName();
 		Assert.assertEquals("Liad", expected);
 	}
+
+	@Severity(SeverityLevel.NORMAL)
+	@Description("move to complete tab and check that appear that don't have projects in this tab")
+	@Test(description = "move to complete tab")
+	public void t_05compleateProjectTab() {
+		MainPage mainPage = new MainPage(driver);
+		mainPage.moveToCompleteTab();
+		String expected = mainPage.noProjectMatchesMessage();
+		Assert.assertEquals("No project matches the criteria ", expected);
+	}
+	
+	@Severity(SeverityLevel.NORMAL)
+	@Description("search project that doesn't exist and check that appear that don't have projects in this tab")
+	@Test(description = "search project that doesn't exist")
+	public void t_06searchFaild() {
+		MainPage mainPage = new MainPage(driver);
+		mainPage.search("bla");
+		String expected = mainPage.noProjectMatchesMessage();
+		Assert.assertEquals("No project matches the criteria ", expected);
+	}
 }
