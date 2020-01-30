@@ -25,8 +25,8 @@ public class YourAccountTest extends BaseTest {
 	}
 
 	@Severity(SeverityLevel.NORMAL)
-	@Description("open account menu and update account information")
-	@Test(description = "update account Information")
+	@Description("open account menu and change password")
+	@Test(description = "change password")
 	public void t_02changePassword() {
 		YourAccountPage yourAccountPage = new YourAccountPage(driver);
 		yourAccountPage.changePassword("Liad924799", "Liad924799", "Liad924799");

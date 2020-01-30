@@ -77,7 +77,7 @@ public class MainPage extends BasePage {
 	private WebElement renameWorkspaceButton;
 	@FindBy(xpath = "//button[text()='Delete Workspace']")
 	private WebElement deleteWorkspaceButton;
-	@FindBy(css = ".text-indigo-600")
+	@FindBy(css = ".flex-no-wrap > :nth-child(4)")
 	private WebElement complateProjectTab;
 	@FindBy(css = ".flex-col > h1")
 	private WebElement noProjectMessage;
@@ -92,6 +92,8 @@ public class MainPage extends BasePage {
 
 	@Step("check accountName after login")
 	public String accountName() {
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.visibilityOf(accountName));
 		return getText(accountName);
 	}
 

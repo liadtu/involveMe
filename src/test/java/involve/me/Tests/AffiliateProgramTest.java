@@ -16,7 +16,7 @@ public class AffiliateProgramTest extends BaseTest {
 	@Test(description = "move to affiliate program page")
 	public void t_01moveToAffiliateProgramPage() {
 		MainPage mainPage = new MainPage(driver);
-		mainPage.chooseTab("Integrations");
+		mainPage.chooseTab("Affiliate Program");
 		AffiliateProgramPage affiliateProgram = new AffiliateProgramPage(driver);
 		String expected = affiliateProgram.title();
 		Assert.assertEquals("Affiliate Program", expected);

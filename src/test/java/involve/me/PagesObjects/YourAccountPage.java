@@ -27,7 +27,7 @@ public class YourAccountPage extends BasePage {
 	private WebElement newPasswordField;
 	@FindBy(css = "[name='password_confirmation']")
 	private WebElement newPasswordConfirmationField;
-	@FindBy(css = "#edit button")
+	@FindBy(css = "#password [type='submit']")
 	private WebElement updatePasswordButton;
 	@FindBy(css = ".alert-success")
 	private WebElement successChangePasswordMessage;
@@ -57,6 +57,8 @@ public class YourAccountPage extends BasePage {
 		fillText(oldPasswordField, oldPass);
 		fillText(newPasswordField, newPass);
 		fillText(newPasswordConfirmationField, newPassConfirmation);
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.elementToBeClickable(updatePasswordButton));
 		click(updatePasswordButton);
 	}
 

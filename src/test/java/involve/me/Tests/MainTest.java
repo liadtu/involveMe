@@ -72,7 +72,7 @@ public class MainTest extends BaseTest {
 		MainPage mainPage = new MainPage(driver);
 		mainPage.moveToCompleteTab();
 		String expected = mainPage.noProjectMatchesMessage();
-		Assert.assertEquals("No project matches the criteria ", expected);
+		Assert.assertEquals("No project matches the criteria", expected);
 	}
 	
 	@Severity(SeverityLevel.NORMAL)
@@ -82,6 +82,6 @@ public class MainTest extends BaseTest {
 		MainPage mainPage = new MainPage(driver);
 		mainPage.search("bla");
 		String expected = mainPage.noProjectMatchesMessage();
-		Assert.assertEquals("No project matches the criteria ", expected);
+		Assert.assertEquals("No project matches the criteria", expected);
 	}
 }

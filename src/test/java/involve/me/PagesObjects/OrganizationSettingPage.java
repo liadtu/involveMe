@@ -55,6 +55,8 @@ public class OrganizationSettingPage extends BasePage {
 	public void chooseOrganization(String organizationName) {
 		for (WebElement el : chooseOrganization) {
 			if (el.getText().equalsIgnoreCase(organizationName)) {
+				WebDriverWait wait = new WebDriverWait(driver, 30);
+				wait.until(ExpectedConditions.elementToBeClickable(el));
 				el.click();
 				break;
 			}
