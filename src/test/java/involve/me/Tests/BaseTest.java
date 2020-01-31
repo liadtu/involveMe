@@ -1,7 +1,7 @@
 package involve.me.Tests;
 
 import org.testng.annotations.BeforeClass;
-
+import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -20,7 +20,15 @@ public class BaseTest {
 		WebDriverManager.chromedriver().setup();
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-features=VizDisplayCompositor");
-		options.addArguments("disable-gpu");
+		options.addArguments("--incognito");
+		options.addArguments("enable-automation"); 
+		options.addArguments("--headless"); 
+		options.addArguments("--no-sandbox"); 
+		options.addArguments("--window-size=1920,1080"); 
+		options.addArguments("--disable-gpu"); 
+		options.addArguments("--disable-extensions"); 
+		options.addArguments("--dns-prefetch-disable");
+		options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
 		driver = new ChromeDriver(options);
 		testContext.setAttribute("WebDriver", this.driver);
 		driver.manage().window().maximize();
