@@ -4,6 +4,7 @@ import org.testng.annotations.BeforeClass;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterClass;
 
@@ -17,7 +18,10 @@ public class BaseTest {
 	@BeforeClass
 	public void setup(ITestContext testContext) {
 		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--disable-features=VizDisplayCompositor");
+		options.addArguments("disable-gpu");
+		driver = new ChromeDriver(options);
 		testContext.setAttribute("WebDriver", this.driver);
 		driver.manage().window().maximize();
 		driver.get("https://app.involve.me/login");
