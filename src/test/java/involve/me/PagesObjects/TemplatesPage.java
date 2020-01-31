@@ -16,7 +16,7 @@ public class TemplatesPage extends BasePage {
 
 	@FindBy(css = "#template-gallery [role='row'] img")
 	private List<WebElement> chooseTemplate;
-	@FindBy(css = " tr:nth-child(16) a:nth-child(2) > button")
+	@FindBy(css = "tr:nth-child(16) a:nth-child(2) > button")
 	private WebElement chooseButton;
 
 	public TemplatesPage(WebDriver driver) {

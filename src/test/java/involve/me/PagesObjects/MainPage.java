@@ -146,7 +146,8 @@ public class MainPage extends BasePage {
 	public void chooseTab(String chooseTab) {
 		for (WebElement el : tabList) {
 			if (el.getText().equalsIgnoreCase(chooseTab)) {
-				sleep(2000);
+				WebDriverWait wait = new WebDriverWait(driver, 30);
+				wait.until(ExpectedConditions.elementToBeClickable(el));
 				el.click();
 				break;
 			}
