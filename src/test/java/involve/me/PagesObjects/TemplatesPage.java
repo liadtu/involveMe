@@ -25,14 +25,17 @@ public class TemplatesPage extends BasePage {
 
 	@Step("choose template {template}")
 	public void getRowForItem(String template) {
-		List<WebElement> chooseTemplate = driver.findElements(By.cssSelector(".details-container > h3"));
+		List<WebElement> chooseTemplate = driver.findElements(By.cssSelector(".c-thumbnail.gallery-item"));
 		for (int i = 0; i < chooseTemplate.size(); i++) {
-			if (getText(chooseTemplate.get(i)).equalsIgnoreCase(template)) {
+			WebElement titleE = chooseTemplate.get(i).findElement(By.cssSelector(".details-container>h3"));
+			String title = getText(titleE);
+			if (title.equalsIgnoreCase(template)) {
 				Actions action = new Actions(driver);
-				action.moveToElement(chooseTemplate.get(i)).build().perform();
+				action.moveToElement(titleE).build().perform();
 				WebDriverWait wait = new WebDriverWait(driver, 30);
-				wait.until(ExpectedConditions.elementToBeClickable(chooseButton));
-				click(chooseButton);
+				wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".e-button-container a:nth-child(2)>button")));
+				WebElement btn = chooseTemplate.get(i).findElement(By.cssSelector(".e-button-container a:nth-child(2)>button"));
+				click(btn);
 				break;
 			}
 		}
